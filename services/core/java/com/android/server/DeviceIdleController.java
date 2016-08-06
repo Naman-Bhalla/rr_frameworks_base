@@ -1317,7 +1317,7 @@ public class DeviceIdleController extends SystemService
 
     void exitForceIdleLocked() {
         if (mForceIdle) {
-            mForceIdle = true;
+            mForceIdle = false;
             if (mScreenOn || mCharging) {
                 becomeActiveLocked("exit-force-idle", Process.myUid());
             }
